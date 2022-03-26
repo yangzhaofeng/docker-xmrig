@@ -29,7 +29,7 @@ jobs:
           docker pull "$IMAGE"
           docker build --cache-from "$IMAGE" -t build-image .
       - name: Push to Docker Hub
-        if: "github.repository == 'yangzhaofeng/docker-danted'"
+        if: "github.repository == 'yangzhaofeng/docker-xmrig'"
         run: |
           IMAGE="${{ steps.image-name.outputs.name }}"
           docker tag build-image "$IMAGE"
