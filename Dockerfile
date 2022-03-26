@@ -3,7 +3,7 @@ FROM debian:bullseye
 RUN cd /tmp && \
 	apt update && \
 	apt upgrade -y && \
-	apt install -y libhwloc15 libuv1 libssl1.1 tmux tor iproute2 procps && \
+	apt install -y libhwloc15 libuv1 libssl1.1 tmux tor iproute2 procps vim iputils-ping && \
 	apt install -y cmake ninja-build build-essential libhwloc-dev libuv1-dev libssl-dev wget && \
 	wget -q https://github.com/xmrig/xmrig/archive/refs/tags/v6.16.4.tar.gz -O xmrig-6.16.4.tar.gz && \
 	tar -zxf xmrig-6.16.4.tar.gz && \
